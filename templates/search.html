@@ -1,0 +1,27 @@
+{{ define "search" }}
+
+{{ template "header" }}
+            <main class="Main Container">
+                <div class="Search_content">
+                    <form action="/view_specific_logs/" method="post">
+                        <h1><label for="logsdate">Select the date of the logs: </label></h1><br>
+                        <input type="text" name="logsdate" id="logsdate" placeholder="Enter Log's date"><br>
+                        <h1><label for="logstype">Your type of logs: </label></h1><br>
+                        <select name="logstype" id="logstype">
+                            <option value="">-- Select the type --</option>
+                            <option value="Connection in SuperUser">Connection in SuperUser</option>
+                            <option value="Disconnection from the SuperUser">Disconnection from the SuperUser</option>
+                            <option value="Log in to the system">Log in to the system</option>
+                            <option value="Opened new session">Opened new session</option>
+                            <option value="Close session">Close session</option>
+                            <option value="User's session">User's session</option>
+                        </select><br>
+                        <h1><label for="usersname">Enter the user: </label></h1><br>
+                        <input type="text" name="usersname" id="usersname" placeholder="Enter the user name"><br>
+                        <button class="OneLog_content_buttons btn btn-warning fixcolor">Search</button>
+                    </form>
+                </div>
+            </main>
+{{ template "footer" }}
+
+{{ end }}

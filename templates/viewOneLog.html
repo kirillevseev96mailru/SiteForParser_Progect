@@ -1,0 +1,21 @@
+{{ define "viewOneLog" }}
+
+{{ template "header" }}
+
+    <main class="Main Container">
+        <div class="OneLog_content">
+            {{ range .Pages }}
+                    <h1>Our log</h1>
+                    <p>User - "{{ .User }}"</p>
+                    <p>Command - "{{ .Command }}"</p>
+                    <p>Date - "{{ .Date }}"</p>
+                    <p>Log's type - "{{ .Type }}"</p>
+            {{ end }}
+            <button class="OneLog_content_buttons"><a href="/viewAllLogs/">Go back to the list of logs</a></button>
+            <button class="OneLog_content_buttons"><a href="/search/">Go back to the search engine</a></button>
+        </div>
+    </main>
+
+{{ template "footer" }}
+
+{{ end }}

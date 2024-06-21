@@ -1,0 +1,395 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+
+.Container{
+    width: 1550px;
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color:#222222;
+}
+
+.HeaderInfo {
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 240px 10px 150px;
+}
+
+.HeaderInfoLeft {
+    width: 450px;
+    gap: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);    
+.logo, .logo:hover {
+    display: inline-block;
+    font-size: 50px;
+    line-height :50px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-decoration:none;
+}
+.logo b {
+    color: #2EE59D;
+    font-size: 56px;
+}
+.logo div {
+    font-size: 24px;
+    line-height:20px;
+    text-align:left;
+    color: #FFF;
+}
+.logo:hover {
+    animation: blur1 1s ease-out;
+}
+.logo:hover b {
+    animation: blur2 1s ease-out;
+}
+@keyframes blur1 {
+    from {
+        text-shadow:0px 0px 10px #fff,
+        0px 0px 10px #fff, 
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #fff;
+    }
+}
+@keyframes blur2 {
+    from {
+        color: #2EE59D ;
+    }
+}
+@media (max-width:600px) {
+    .logo, .logo:hover {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .logo b {
+        font-size: 48px;
+    }
+    .logo div {
+        font-size: 18px;
+    }
+}
+
+.HeaderInfoLeft h1 {
+    padding: 5px 25px 5px 25px;
+    color:#2EE59D;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px #2EE59D;
+}
+
+.HeaderInfoRight p {
+    padding: 5px 25px 5px 25px;
+}
+
+.HeaderInfoRight {
+    gap: 33px;
+    display: flex;
+    width: 450px;
+    position: relative;
+}
+
+.HeaderInfo a{
+    color: white;
+}
+
+.Header_buttons {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #000000;
+    background: rgb(95, 95, 95);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+    transition: .3s;
+} .Header_buttons:hover {
+        background: #2EE59D;
+        box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+        color: rgb(255, 0, 0);
+        transform: translateY(-7px);
+}
+
+.Main {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7df5c5;
+}
+
+.main_content {
+    display: flex;
+    gap: 100px;
+}
+
+/*  Стили для главной страницы index.hmtl  */
+
+.main_content_index {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    border-color: #222222;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    width: 350px;
+}
+
+.main_content_index h1 {
+    color: #222222;
+}
+
+.main_content_index p {
+    color: #222222;
+}
+
+/*  Стили для страницы moreInfo.hmtl  */
+
+.moreInfo_content {
+    display: flex;
+    gap: 200px;
+}
+
+.main_content_moreInfo {
+    width: 500px;
+}
+
+/*  Стили для страницы viewAllLogs.hmtl  */
+
+.AllLogs_content {
+    height: 500px;
+    display: flex;
+    border: 10px double #222222;
+    background-color: #00ff95;
+}
+
+.AllLogs_content ul {
+    padding: 10px 10px 10px 10px;
+    overflow:hidden; 
+    overflow-y:scroll; 
+    width:1000px;
+}
+
+.AllLogs_content a {
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.AllLogs_content a:active {
+    color: rgb(0, 0, 0);
+}
+
+.AllLogs_content a:hover {
+    color: white;
+}
+
+
+/*  Стили для страницы viewOneLog.hmtl  */
+
+.OneLog_content {
+    width: 600px;
+    height: 450px;
+    border: 20px double #222222;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    gap: 20px;
+}
+
+.OneLog_content p {
+    color: #222222;
+}
+
+.OneLog_content a {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.OneLog_content a:active {
+    color: rgb(0, 0, 0);
+}
+
+.OneLog_content a:hover {
+    color: white;
+}
+
+.OneLog_content_buttons {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 60px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #000000;
+    background: rgb(95, 95, 95);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+    transition: .3s;
+} .OneLog_content_buttons:hover {
+        background: #2EE59D;
+        box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+        color: rgb(255, 255, 255);
+        transform: translateY(-7px);
+}
+
+/*  Стили для страницы viewSpecificLogs.hmtl  */
+
+.SpecificLogs_content {
+    height: 75%;
+    display: flex;
+    border: 10px double #222222;
+    background-color: #00ff95;
+}
+
+.SpecificLogs_content ul {
+    padding: 10px 10px 10px 10px;
+    overflow:hidden; 
+    overflow-y:scroll; 
+    width: 900px;
+}
+
+.SpecificLogs_content a {
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.SpecificLogs_content a:active {
+    color: rgb(0, 0, 0);
+}
+
+.SpecificLogs_content a:hover {
+    color: white;
+}
+
+.mainspecific {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+
+/*  Стили для страницы search.hmtl  */
+
+.Search_content {
+    width: 600px;
+    height: 500px;
+    border: 20px double #222222;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Search_content input{
+    margin-bottom: 30px;
+}
+
+.Search_content select {
+    margin-bottom: 30px;
+}
+
+.fixcolor:hover {
+    box-shadow: 0 15px 20px #222222;
+}
+
+
+/*  Стили для страницы footer.hmtl  */
+
+.footer {
+    display: flex;
+    gap: 655px;
+    margin: 0 auto;
+    height: 79px;
+    align-items: center;
+    justify-content: center;
+    background: #222222;
+}
+
+.footer p {
+    font-family: 'Lato-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+}
+
+.Footer_imgs {
+    display: flex;
+    gap: 7px;
+}
+
+.Footer_imgs svg{
+    cursor: pointer;
+}
+
+.footer div {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.BrowseAllProduct:hover {
+    background-color: #2EE59D;
+}
+
+.BrowseAllProduct:hover p {
+    color: #2EE59D;
+}
+
+.Footer_imgs div:hover {
+    background-color: #2EE59D;
+}
+
+.Footer_imgs svg:hover {
+    fill: #2EE59D;
+}

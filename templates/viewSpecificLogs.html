@@ -1,0 +1,20 @@
+{{ define "viewSpecificLogs" }}
+
+{{ template "header" }}
+
+    <main class="mainspecific Main Container">
+        <h1>Logs found</h1><br>
+        <div class="SpecificLogs_content">
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <a href="/viewOneLog/?User={{.User}}&Type={{.Type}}&Dates={{.Date}}&Command={{.Command}}"><p>{{ .Date }} {{ .User }} {{ .Command }} {{ .Type }}</p></a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </main>
+
+{{ template "footer" }}
+
+{{ end }}
